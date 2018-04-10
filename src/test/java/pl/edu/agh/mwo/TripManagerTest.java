@@ -19,7 +19,9 @@ public class TripManagerTest {
 	
 	@Test
 	public void addTripTest() {
-		// TO DO
+		assertEquals(0, tripManager.getTrips().size());
+		tripManager.addTrip(trip);
+		assertEquals(1, tripManager.getTrips().size());
 	}
 	
 	@Test
