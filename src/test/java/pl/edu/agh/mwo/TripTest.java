@@ -15,6 +15,18 @@ public class TripTest {
         photo = new Photo();
     }
 
+    @Test
+    public void setNameTest() {
+        trip.setName("Some Trip");
+        assertTrue(trip.getName() == "Some Trip");
+    }
+
+    @Test
+    public void setDescriptionTest() {
+        trip.setDescription("Trip description");
+        assertTrue(trip.getDescription() == "Trip description");
+    }
+
 	@Test
 	public void addPhotoTest() {
 		assertEquals(0, trip.getPhotos().size());
