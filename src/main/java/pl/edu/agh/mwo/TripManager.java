@@ -15,5 +15,13 @@ public class TripManager {
         return trips;
     }
 
+    public void removeTrip() {
+
+    }
+
+    public void findTrip() {
+
+    }
+
 
 }
