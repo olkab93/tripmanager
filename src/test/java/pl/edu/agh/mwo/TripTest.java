@@ -10,7 +10,7 @@ public class TripTest {
     private Photo photo;
 
     @Before
-    public void createDataForTests() {
+    public void createDataForTripTest() {
         trip = new Trip();
         photo = new Photo();
     }
@@ -21,6 +21,5 @@ public class TripTest {
 		trip.addPhoto(photo);
 		assertEquals(1, trip.getPhotos().size());
 	}
-	
 
 }
