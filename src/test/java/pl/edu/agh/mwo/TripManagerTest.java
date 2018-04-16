@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class TripManagerTest {
 
@@ -26,18 +27,15 @@ public class TripManagerTest {
 	
 	@Test
 	public void removeTripTest() {
-		// TO DO
+		trip.setName("trip");
+		assertEquals(trip.getName(); );
 	}
-	
-	@Test
-	public void getTripsTest() {
-		// TO DO
-	}
-	
+
 	@Test
 	public void findTripTest() {
-		// TO DO
+		trip.setName("trip");
+		assertEquals(trip.getName(), tripManager.findTrip("trip"));
 	}
-	
+
 
 }
