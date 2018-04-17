@@ -16,7 +16,8 @@ public class PhotoTest {
 
     @Test
     public void setCommentTest() {
-        assertTrue(photo.getComment() == "Photo comment");
+        photo.setComment("new Photo comment");
+        assertTrue(photo.getComment() == "new Photo comment");
     }
 
 
