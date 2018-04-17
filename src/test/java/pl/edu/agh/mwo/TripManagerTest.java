@@ -42,7 +42,7 @@ public class TripManagerTest {
 	    tripManager.addTrip(trip);
 		assertEquals(trip, tripManager.findTrip("Some trip"));
 		tripManager.addTrip(another_tip);
-		assertEquals(another_tip, tripManager.findTrip("Another trip"));
+		assertEquals(another_tip, tripManager.findTrip("Another trip description"));
 	}
 
     @Test (expected = NoSuchElementException.class)
