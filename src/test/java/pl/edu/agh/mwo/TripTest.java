@@ -11,19 +11,17 @@ public class TripTest {
 
     @Before
     public void createDataForTripTest() {
-        trip = new Trip();
-        photo = new Photo();
+        trip = new Trip("Some Trip", "Trip description");
+        photo = new Photo("Photo from some trip");
     }
 
     @Test
     public void setNameTest() {
-        trip.setName("Some Trip");
         assertTrue(trip.getName() == "Some Trip");
     }
 
     @Test
     public void setDescriptionTest() {
-        trip.setDescription("Trip description");
         assertTrue(trip.getDescription() == "Trip description");
     }
 
