@@ -17,12 +17,14 @@ public class TripTest {
 
     @Test
     public void setNameTest() {
-        assertTrue(trip.getName() == "Some Trip");
+        trip.setName("Some Trip new name");
+        assertTrue(trip.getName() == "Some Trip new name");
     }
 
     @Test
     public void setDescriptionTest() {
-        assertTrue(trip.getDescription() == "Trip description");
+        trip.setDescription("Trip new description");
+        assertTrue(trip.getDescription() == "Trip new description");
     }
 
 	@Test
