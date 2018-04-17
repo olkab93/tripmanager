@@ -1,28 +1,27 @@
 package pl.edu.agh.mwo;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.NoSuchElementException;
 
 public class TripManager {
 
-    Collection<Trip> trips = new ArrayList<Trip>();
+    ArrayList<Trip> trips = new ArrayList<Trip>();
 
     public void addTrip(Trip trip) {
         trips.add(trip);
     }
 
-    public Collection<Trip> getTrips() {
+    public ArrayList<Trip> getTrips() {
         return trips;
     }
 
-    public void removeTrip() {
-        //TO DO
+    public void removeTrip(Trip trip) {
+        trips.remove(trip);
     }
 
-    public Trip findTrip(String tripName) throws  NoSuchElementException {
+    public Trip findTrip(String tripKeyword) throws  NoSuchElementException {
         for (Trip trip : trips) {
-            if (trip.getName().equals(tripName)) {
+            if (trip.name.equals(tripKeyword) || trip.description.equals(tripKeyword)) {
                 return trip;
             }
         }
