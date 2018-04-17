@@ -3,6 +3,8 @@ package pl.edu.agh.mwo;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.Assert.*;
 
 public class TripManagerTest {
@@ -41,6 +43,12 @@ public class TripManagerTest {
 		assertEquals(trip, tripManager.findTrip("Some trip"));
 		tripManager.addTrip(another_tip);
 		assertEquals(another_tip, tripManager.findTrip("Another trip"));
+	}
+
+    @Test (expected = NoSuchElementException.class)
+	public void NoSuchElementExceptionTest() {
+		tripManager.addTrip(trip);
+		tripManager.findTrip("trip trip");
 	}
 
 
