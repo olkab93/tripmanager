@@ -11,13 +11,12 @@ public class PhotoTest {
 
     @Before
     public void CreateDataForPhotoTest() {
-        photo = new Photo();
+        photo = new Photo("Photo comment");
     }
 
     @Test
     public void setCommentTest() {
-        photo.setComment("Comment to the photo");
-        assertTrue(photo.getComment() == "Comment to the photo");
+        assertTrue(photo.getComment() == "Photo comment");
     }
 
 
