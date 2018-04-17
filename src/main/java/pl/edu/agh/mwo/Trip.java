@@ -1,12 +1,12 @@
 package pl.edu.agh.mwo;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Trip {
 
 	String name;
 	String description;
+    ArrayList<Photo> photos = new ArrayList<Photo>();
 
     public Trip(String name, String description) {
         this.name = name;
@@ -28,10 +28,8 @@ public class Trip {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
-	Collection<Photo> photos = new ArrayList<Photo>();
 	
-	public Collection<Photo> getPhotos() {
+	public ArrayList<Photo> getPhotos() {
 		return photos;
 	}
 
