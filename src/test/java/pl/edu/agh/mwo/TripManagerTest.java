@@ -3,8 +3,7 @@ package pl.edu.agh.mwo;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class TripManagerTest {
 
@@ -38,7 +37,10 @@ public class TripManagerTest {
 
 	@Test
 	public void findTripTest() {
-		//assertEquals(trip.getName(), tripManager.findTrip("trip"));
+	    tripManager.addTrip(trip);
+		assertEquals(trip, tripManager.findTrip("Some trip"));
+		tripManager.addTrip(another_tip);
+		assertEquals(another_tip, tripManager.findTrip("Another trip"));
 	}
 
 
